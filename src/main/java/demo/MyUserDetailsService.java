@@ -1,4 +1,4 @@
-package utils;
+package demo;
 
 
 import org.springframework.security.core.userdetails.User;
@@ -13,8 +13,7 @@ import java.util.ArrayList;
 public class MyUserDetailsService implements UserDetailsService {
 
     @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        return new User("foo", "foo",
-                new ArrayList<>());
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+        return new User("foo", "foo", new ArrayList<>());
     }
 }
