@@ -55,7 +55,6 @@ public class HelloWorld {
     System.out.println(jwt);
     return ResponseEntity.ok(new AuthenticationResponse(jwt));
   }
-
   @Autowired
   UserRepository userRepository;
 
@@ -70,7 +69,7 @@ public class HelloWorld {
   User user = new User();
   user.setPassword(pw_hash);
   user.setUsername(username);
-  user = userRepository.save(user);
+  // user = userRepository.save(user);
   
   }
  
